@@ -5,7 +5,15 @@ let user2Points = 0;
 
 while (user2Points != 3 && user1Points != 3) {
     let user1Choice = prompt('User1, please make your choice (stone, scissors, paper)');
+
+    if (user1Choice != 'paper' && user1Choice != 'stone' && user1Choice != 'scissors') {
+        alert('Please, type "stone", "scissors" or "paper"');
+    }
+
     let user2Choice = prompt('User2, please make your choice (stone, scissors, paper)');
+    if (user2Choice != 'paper' && user2Choice != 'stone' && user2Choice != 'scissors') {
+        alert('Please, type "stone", "scissors" or "paper"');
+    }
 
     if (user1Choice === 'stone' && user2Choice === 'paper') {
         user2Points = user2Points + 1;
@@ -40,6 +48,7 @@ while (user2Points != 3 && user1Points != 3) {
         user1Points = user1Points + 1;
         alert(`User1 win round and have ${user1Points} points`);
     }
+
 
 }
 if (user1Points === 3) {
